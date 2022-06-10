@@ -20,7 +20,7 @@ btn.addEventListener('click', (e) => {
       guardar_localStorage(data,"pizzas");
       const dataLS = obtener_localStorage("pizzas");
 
-      if(input.value < -1 || input.value > 7){
+      if(input.value < -1 || input.value >= 6  ){
         mostrarMensaje("Pizza no encontrada.");
       }
 
