@@ -11,15 +11,13 @@ const h4 = document.querySelector("#mensaje");
 
 
 btn.addEventListener('click', (e) => {
+  e.preventDefault();
+
   h4.textContent = "";//limpio mensaje
   LimpiarCard();
   spiner.style.display="inline-block";
   setTimeout( () => {
     try {
-      e.preventDefault();
-      
-      LimpiarCard();
-
       guardar_localStorage(data,"pizzas");
       const dataLS = obtener_localStorage("pizzas");
 
