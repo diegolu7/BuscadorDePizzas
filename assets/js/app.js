@@ -7,8 +7,11 @@ import { mostrarMensaje } from "./MostrarMensaje.js";
 const input = document.querySelector("#id");
 const btn = document.querySelector("#btn");
 const spiner = document.querySelector("#loading");
+const h4 = document.querySelector("#mensaje");
+
 
 btn.addEventListener('click', (e) => {
+  h4.textContent = "";//limpio mensaje
   LimpiarCard();
   spiner.style.display="inline-block";
   setTimeout( () => {
