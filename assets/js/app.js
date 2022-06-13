@@ -19,7 +19,7 @@ btn.addEventListener('click', (e) => {
   setTimeout( () => {
     try {
       if(input.value === ""){
-        mostrarMensaje("Debe ingresar un ID de Pizza");
+        mostrarMensaje("Debe ingresar un ID de Pizza.");
       }else{
         guardar_localStorage(data,"pizzas");
         const dataLS = obtener_localStorage("pizzas");
