@@ -23,7 +23,10 @@ btn.addEventListener('click', (e) => {
 
       if(input.value < -1 || input.value >= 6  ){
         mostrarMensaje("Pizza no encontrada.");
-      }
+      }//
+      if(input.value === ""){
+        mostrarMensaje("Debe ingresar un ID de Pizza");
+      }//
 
       for (let i = 0; i < dataLS.length; i++) {
         if (dataLS[i].id == input.value) {
