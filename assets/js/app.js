@@ -18,24 +18,22 @@ btn.addEventListener('click', (e) => {
   spiner.style.display="inline-block";
   setTimeout( () => {
     try {
-      guardar_localStorage(data,"pizzas");
-      const dataLS = obtener_localStorage("pizzas");
-
-      if(input.value < -1 || input.value >= 6  ){
-        mostrarMensaje("Pizza no encontrada.");
-      }//
       if(input.value === ""){
         mostrarMensaje("Debe ingresar un ID de Pizza");
-        console.log("KILL");
-        break;
-      }//
+      }else{
+        guardar_localStorage(data,"pizzas");
+        const dataLS = obtener_localStorage("pizzas");
 
-      for (let i = 0; i < dataLS.length; i++) {
-        if (dataLS[i].id == input.value) {
-          CargarCard(dataLS[i].nombre, dataLS[i].precio, dataLS[i].img, dataLS[i].ingredientes,)
+        if(input.value < -1 || input.value >= 6  ){
+           mostrarMensaje("Pizza no encontrada.");
+          }
+        for (let i = 0; i < dataLS.length; i++) {
+          if (dataLS[i].id == input.value) {
+            CargarCard(dataLS[i].nombre, dataLS[i].precio, dataLS[i].img, dataLS[i].ingredientes,)
+          }
         }
       }
-  }
+    }
   finally {
       spiner.style.display="none";
   }
