@@ -26,7 +26,7 @@ btn.addEventListener('click', (e) => {
       }//
       if(input.value === ""){
         mostrarMensaje("Debe ingresar un ID de Pizza");
-          limpiar_localStorage();
+            break;
       }//
 
       for (let i = 0; i < dataLS.length; i++) {
